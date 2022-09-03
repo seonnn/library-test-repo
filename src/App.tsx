@@ -1,5 +1,16 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
+import Main from './pages/Main/Main';
+
 function App() {
-  return <div className="App">github branch 생성 및 merge 실습</div>;
+  return (
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Main />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
